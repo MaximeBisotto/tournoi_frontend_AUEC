@@ -40,12 +40,23 @@ export default class ListTeam extends React.Component {
       return <div>Chargement…</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.nomEquipe}>
-              {item.nomEquipe}
-            </li>
-          ))}
+      	<ul>
+		  	<li className="league selected">
+		    	<div className="info">
+		    	    <div className="label">
+		    	        <div className="name">Toutes les équipes</div>
+		            </div>
+		        </div>
+		    </li>
+		    {items.map(item => (
+		    <li key={item.nomEquipe} className="league">
+		    	<div className="info">
+		    	    <div className="label">
+		    	        <div className="name">{item.nomEquipe}</div>
+		            </div>
+		        </div>
+		    </li>
+		    ))}
         </ul>
       );
     }
