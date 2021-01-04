@@ -6,9 +6,7 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="The best place to watch LoL Esports and earn rewards!" name="description">
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
-    <link href="/manifest.json" rel="manifest">
     <link href="index.css" rel="stylesheet">
-    <script src="https://www.googletagmanager.com/gtm.js?id=GTM-MBFKBN" type="text/javascript"></script>
     <style type="text/css">
 
     #riotbar-bar svg, #riotbar-subbar .riotbar-footer svg, #riotbar-application-switcher svg {
@@ -22,8 +20,8 @@
     .riotbar-base-element img,
     .riotbar-base-element ol, .riotbar-base-element ul, .riotbar-base-element li,
     .riotbar-base-element strong, .riotbar-base-element em {
-        margin: 0;
-        padding: 0;
+        /*margin: 0;*/
+        /*padding: 0;*/
         border: 0;
         outline: 0;
         font-size: 100%;
@@ -132,6 +130,11 @@
         top: 0;
     }
 
+    .riotbar-bar-content {
+        width: auto;
+        display: table;
+    }
+
     #riotbar-bar .riotbar-right-content {
         padding-right: 16px;
         right: 0px;
@@ -165,50 +168,10 @@
         }
     }
 
-    #riotbar-navbar {
-        display: table;
-        font-size: 0;
-        height: 80px;
-        margin-right: 0;
-        max-width: 100%;
-        opacity: 1;
-        text-align: center;
-    }
-
     @media (max-width: 1024px) {
-        #riotbar-navbar {
-            display: inline-block;
-        }
-    }
-
-    #riotbar-navbar.fade-in {
-        opacity: 0;
-    }
-
-    #riotbar-navbar.fade-in.ready {
-        opacity: 1;
-        transition: opacity 0.3s cubic-bezier(0.06, 0.81, 0, 0.98) 0s;
-    }
-
-    #riotbar-navbar .riotbar-navbar-navitem-container.nav-dropdown-overflow.hide {
-        display: none;
-    }
-
-    @media (max-width: 1024px) {
-        #riotbar-navbar {
-            position: static;
-        }
-
-        #riotbar-navbar .riotbar-navbar-separator,
-        #riotbar-navbar .riotbar-navbar-link,
-        #riotbar-navbar .riotbar-navbar-navitem-container {
+        #riotbar-navbar .riotbar-navbar-separator
+        {
             display: none;
-        }
-
-        #riotbar-navbar .riotbar-explore-label {
-            display: block;
-            line-height: 80px;
-            height: 80px;
         }
 
         #riotbar-navbar .riotbar-explore-label svg {
@@ -267,7 +230,7 @@
         display: flex;
     }
 
-    #riotbar-bar .riotbar-navmenu-category {
+    #riotbar-bar {
         overflow: visible;
         position: relative;
         border-top: 0;
@@ -275,12 +238,7 @@
         padding-top: 0;
     }
 
-    #riotbar-bar .riotbar-navmenu-category:before, #riotbar-bar .riotbar-navmenu-category:after {
-        content: " ";
-        display: table;
-    }
-
-    #riotbar-bar .riotbar-navmenu-category:after {
+    #riotbar-bar {
         clear: both;
     }
 
@@ -295,8 +253,8 @@
     .riotbar-base-element img,
     .riotbar-base-element ol, .riotbar-base-element ul, .riotbar-base-element li,
     .riotbar-base-element strong, .riotbar-base-element em {
-        margin: 0;
-        padding: 0;
+        /*margin: 0;*/
+        /*padding: 0;*/
         border: 0;
         outline: 0;
         font-size: 100%;
@@ -400,27 +358,22 @@
         }
     }
 
-    #riotbar-bar .riotbar-right-content, #riotbar-bar .riotbar-right-mobile-content {
-        bottom: 0;
-        top: 0;
-    }
-
-    #riotbar-bar .riotbar-right-content {
+    #riotbar-bar {
         padding-right: 16px;
         right: 0px;
     }
 
     @media (max-width: 1024px) {
-        #riotbar-bar .riotbar-right-content {
+        #riotbar-bar{
             padding-right: 0;
         }
     }
 
-    #riotbar-bar .riotbar-right-content .riotbar-navmenu-touchpoints, #riotbar-bar .riotbar-right-content .riotbar-navmenu-links {
+    #riotbar-bar, #riotbar-bar {
         transition: opacity 0.2s linear;
     }
 
-    #riotbar-bar #riotbar-mobile-nav {
+    #riotbar-bar {
         display: none;
         margin-right: 10px;
         margin-left: 10px;
@@ -438,60 +391,10 @@
         }
     }
 
-    #riotbar-navbar {
-        display: table;
-        font-size: 0;
-        height: 80px;
-        margin-right: 0;
-        max-width: 100%;
-        opacity: 1;
-        text-align: center;
-    }
-
     @media (max-width: 1024px) {
-        #riotbar-navbar {
-            display: inline-block;
-        }
-    }
-
-    #riotbar-navbar.fade-in {
-        opacity: 0;
-    }
-
-    #riotbar-navbar.fade-in.ready {
-        opacity: 1;
-        transition: opacity 0.3s cubic-bezier(0.06, 0.81, 0, 0.98) 0s;
-    }
-
-    #riotbar-navbar .riotbar-explore-label {
-        display: none;
-    }
-
-    #riotbar-navbar .riotbar-navbar-navitem-container {
-        display: inline-block;
-        position: relative;
-        height: 80px;
-    }
-
-    #riotbar-navbar .riotbar-navbar-navitem-container.nav-dropdown-overflow.hide {
-        display: none;
-    }
-
-    @media (max-width: 1024px) {
-        #riotbar-navbar {
-            position: static;
-        }
-
-        #riotbar-navbar .riotbar-navbar-separator,
-        #riotbar-navbar .riotbar-navbar-link,
-        #riotbar-navbar .riotbar-navbar-navitem-container {
+        #riotbar-navbar .riotbar-navbar-separator
+        {
             display: none;
-        }
-
-        #riotbar-navbar .riotbar-explore-label {
-            display: block;
-            line-height: 80px;
-            height: 80px;
         }
 
         #riotbar-navbar .riotbar-explore-label svg {
@@ -550,7 +453,7 @@
         display: flex;
     }
 
-    #riotbar-bar .riotbar-navmenu-category {
+    #riotbar-bar {
         overflow: visible;
         position: relative;
         border-top: 0;
@@ -558,13 +461,13 @@
         padding-top: 0;
     }
 
-    #riotbar-bar .riotbar-navmenu-category:before, #riotbar-bar .riotbar-navmenu-category:after {
-        content: " ";
-        display: table;
-    }
-
-    #riotbar-bar .riotbar-navmenu-category:after {
-        clear: both;
+    .riotbar-navbar-navitem-container {
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        vertical-align: middle;
     }
     </style>
 
@@ -586,47 +489,16 @@
                            </span>
                         </div>
                     </div>
-                    <div class="riotbar-bar-content" id="riotbar-bar-content" style="width: auto;">
-                        <div class="fade-in ready" id="riotbar-navbar">
-                            <div class="riotbar-navbar-navitem-container" data-link-id="schedule"><a
-                                    class="riotbar-navbar-link riotbar-active-link" data-riotbar-link-id="schedule"
-                                    href="/schedule" target="">PLANNING</a></div>
-                            <div class="riotbar-navbar-navitem-container" data-link-id="vods"><a
-                                    class="riotbar-navbar-link " data-riotbar-link-id="vods" href="/vods"
-                                    target="">VOD</a></div>
-                            <div class="riotbar-navbar-navitem-container" data-link-id="standings"><a
-                                    class="riotbar-navbar-link " data-riotbar-link-id="standings" href="/standings"
-                                    target="">CLASSEMENT</a></div>
-                            <div class="riotbar-navbar-navitem-container" data-link-id="rewards"><a
-                                    class="riotbar-navbar-link " data-riotbar-link-id="rewards" href="/rewards"
-                                    target="">RÉCOMPENSES</a></div>
-                            <div class="riotbar-navbar-navitem-container" data-link-id="news"><a
-                                    class="riotbar-navbar-link " data-riotbar-link-id="news" href="/news" target="">Actualités</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="riotbar-right-content riotbar-show-links" id="riotbar-right-content">
-                        <div id="riotbar-mobile-nav">
-                            <a class="riotbar-explore" id="riotbar-explore">
-                                <svg class="" height="32" viewBox="0 0 32 32" width="32">
-                                    <circle cx="16" cy="16" fill="#F9F9F9" opacity=".07" r="16"></circle>
-                                    <path d="M22 10v2H10v-2zM22 15v2H10v-2zM22 20v2H10v-2z" fill="#C7C7C7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="riotbar-navmenu-touchpoints">
-                            <div class="riotbar-navmenu-category"></div>
-                        </div>
-                    </div>
+                   <div id='navbar'></div>
                 </div>
             </div>
-    </div>
-    </nav>
+        </nav>
 </div>
 <div id="main">
 <main class="Schedule">
     
 </main>
+</div>
 </div>
 </body>
 </html>
