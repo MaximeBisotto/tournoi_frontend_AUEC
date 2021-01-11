@@ -1,8 +1,18 @@
 //import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import Schedule from './componment/schedule';
 
-function App() {
+class App extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false
+    };
+  }
+
   /*return (
     <div className="App">
       <header className="App-header">
@@ -27,10 +37,11 @@ function App() {
 	//<div dangerouslySetInnerHTML={ {__html: html} } />
 	<HtmlPage />
   );*/
-  return(
-      <Schedule />
-  );
-
+  render() {
+    return(
+        <Schedule filterTeam={this.props.match.params.idTeamFilter}/>
+    );
+  }
 }
 
 export default App;

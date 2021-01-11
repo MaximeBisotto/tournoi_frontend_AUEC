@@ -1,6 +1,10 @@
 import React from 'react';
 import ListTeam from "./listTeam";
 import ajaxGET from "../ajax";
+import {createBrowserHistory} from "history";
+const history = createBrowserHistory();
+
+
 
 export default class Team extends React.Component {
     constructor(props) {
@@ -53,6 +57,21 @@ export default class Team extends React.Component {
         });
     }
 
+    // shouldComponentUpdate() {
+    //     var team;
+    //     var result = ajaxGET("http://auec-leaderboard-dev.herokuapp.com/api/teams/");
+    //     for (var i = 0; i < result.results.length; i++) {
+    //         if (result.results[i].teamName == this.props.teamName) {
+    //             team = result.results[i];
+    //             break;
+    //         }
+    //     }
+    //     this.setState({
+    //         isLoaded: true,
+    //         items: team
+    //     });
+    // }
+
     render() {
         const { error, isLoaded, items } = this.state;
 
@@ -69,7 +88,7 @@ export default class Team extends React.Component {
                 <ul>
                     {items.players_auec.map(item => (
                         <li key={item.nickname}>
-                            <div className="name">{item.nickname}</div>
+                            <div className="name" onClick={() => history.push(this.props.location.pathname + item.id)} href='this.props.location.pathname + {item.id}'>{item.nickname}</div>
                         </li>
                     ))}
                 </ul>

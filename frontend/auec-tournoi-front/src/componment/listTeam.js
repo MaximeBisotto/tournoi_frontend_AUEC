@@ -1,5 +1,7 @@
 import React from 'react';
 import ajaxGET from '../ajax'
+import {createBrowserHistory} from "history";
+const history = createBrowserHistory();
 
 export default class ListTeam extends React.Component {
   constructor(props) {
@@ -39,6 +41,11 @@ export default class ListTeam extends React.Component {
     console.log(result);
   }
 
+  clickTeam(idTeam) {
+    history.push(history.location.pathname + idTeam);
+    history.location.reload();
+  }
+
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
@@ -59,7 +66,9 @@ export default class ListTeam extends React.Component {
                 <li key={item.teamName} className="league">
                   <div className="info">
                     <div className="label">
-                      <div className="name">{item.teamName}</div>
+                      <div className="name" onClick={() => this.clickTeam(item.id)}>
+                        {item.teamName}
+                      </div>
                     </div>
                   </div>
                 </li>
