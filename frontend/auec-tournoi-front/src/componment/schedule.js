@@ -25,7 +25,7 @@ function Schedule(props) {
                       <ul className="leagues">
                           <div>
                               <ListTeam />
-                              <ListMatch filterTeam={props.filterteam}/>
+                              <ListMatch filterTeam={props.filterTeam}/>
                           </div>
                       </ul>
                   </div>

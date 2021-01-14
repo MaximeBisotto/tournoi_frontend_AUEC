@@ -46,7 +46,7 @@ export default class Team extends React.Component {
         var team;
         var result = ajaxGET("http://auec-leaderboard-dev.herokuapp.com/api/teams/");
         for (var i = 0; i < result.results.length; i++) {
-            if (result.results[i].teamName == this.props.teamName) {
+            if (result.results[i].id == this.props.filterTeam) {
                 team = result.results[i];
                 break;
             }

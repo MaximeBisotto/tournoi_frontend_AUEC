@@ -9,6 +9,5 @@ export default function ajaxGET(url) {
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Authorization", "Token 5876e596bd4a4f94ef2f32f991d5b7d77e836507");
     xmlhttp.send();
-    console.log(result);
     return result;
 }

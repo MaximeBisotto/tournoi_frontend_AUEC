@@ -7,12 +7,12 @@ import React from "react";
 class team extends React.Component{
     render() {
         return(<div>
-                <Team/>
-                <ListTeam teamName={this.props.selectTeam}/>
+                <Team filterTeam={this.props.match.params.idTeamSelect}/>
+                <ListTeam/>
             </div>
         );
     }
 
-}
+};
 
 export default team;
